@@ -1,0 +1,19 @@
+<div class="row" style="margin-top: 10%;" > 
+    <div class="col-sm-12">
+        <div class="btn btn-success" (click)="newRecipie()"   style="font-weight: bold; margin: 5px; box-shadow:2px 2px 2px  rgb(191, 189, 189) ">New Recipie</div>
+    </div>
+</div>
+<hr style="width:100%;">
+<div class="row" style="cursor:pointer;" >
+    <div class="col-sm-12"  id="recipe">
+        <app-recipies-item 
+        *ngFor="let recipeEl of recipies; let i =index" 
+        [recipe]="recipeEl"
+        [index]="i"
+        ></app-recipies-item>
+    </div>
+</div>
+  
+ 
+ 
+

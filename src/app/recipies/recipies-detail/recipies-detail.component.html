@@ -1,0 +1,40 @@
+ 
+ <div class="row" style="margin-top: 10px;margin-bottom: 10px;">
+    <div class="col-xs-12" style="margin: 10px; box-shadow:2px 2px 2px  rgb(191, 189, 189) ">
+     <img [src]=" recpee.imagePath" alt="{{recpee.name}}" class="image-responsive">
+
+    </div>
+</div>
+ <div class="row" style="margin: 5px;  ">
+     <div class="col-xs-12" >
+         <h4 style="font-weight: bold; "> {{recpee.name}}</h4>
+     </div>
+ </div>
+<div class="row" style="margin: 5px; ">
+    <div class="col-xs-12">
+        <div class=" btn-group dropdown onDropDown" >
+            <button class=" btn btn-primary dropdown-toggle "role="button">
+              <h3> Manage Recipe</h3>  <span class="caret"></span></button>
+            <ul class="dropdown-menu menu"  >
+            <li ><a  (click)="onAddToShoppingList()" style="cursor: pointer;font-weight: bold;" >To Shooping List </a></li>
+            <li ><a   (click)="editing()" style="cursor: pointer;font-weight: bold;"  >Edit Recipie</a></li>
+            <li ><a    (click)="onDelete()" style="cursor: pointer;font-weight: bold;" >Delete Recipie</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
+<div class="row" style="margin: 5px;" >
+    <div class="col-xs-12" style="font-weight: bold;">
+        {{recpee.description}}
+    </div>
+</div>
+<div class="row" style="margin: 5px;"  >
+    <div class="col-xs-12" style="box-shadow:2px 2px 2px  rgb(191, 189, 189)">
+       <ul class="list-group">
+           <li class="list-group-item"  
+             *ngFor="let ingredients of  recpee.Ingreadient" style=" box-shadow:2px 2px 2px  rgb(191, 189, 189);font-weight: bold; ">
+              {{ingredients.name}} -{{ingredients.amount}}
+           </li>
+       </ul>
+    </div>
+</div>

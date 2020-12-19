@@ -1,0 +1,11 @@
+<a  class="  col-xs-12 "
+ class="list-group-item  " 
+ [routerLink]="[index]"
+   >
+    <div class="pull-left"  >
+         <h4 class="list-group-header" style="text-decoration:none;font-size: 3rem; box-shadow:2px 2px 2px  rgb(191, 189, 189) "> {{recipe.name}}</h4>
+     <p class="list-group-item  " style="word-break: break-all; font-weight: bold;color: crimson; margin: 10px; box-shadow:2px 2px 2px  rgb(191, 189, 189); margin-right:5%  "> {{recipe.description}}</p> 
+  </div><br>
+     <span class="pull-right"><img src="{{recipe.imagePath}}"
+       alt="{{recipe.name}}" class="img-responsive"    style= "   margin: 10px; box-shadow:2px 2px 2px  rgb(191, 189, 189)" ></span>
+    </a>
